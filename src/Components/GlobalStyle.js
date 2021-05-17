@@ -27,6 +27,9 @@ button{
         color:white;
     }
 }
+h1{
+    color:white;
+}
 h2{
     font-weight:lighter;
     font-size:3rem;

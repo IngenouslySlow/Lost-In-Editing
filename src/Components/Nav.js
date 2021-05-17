@@ -1,15 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+
+//Router thing
+import { Link } from "react-router-dom";
 const Nav = () => {
   return (
     <Navigation>
-      <a id="logo" href="#">
+      <Link id="logo" to="/">
         Lost In Editing
-      </a>
+      </Link>
       <ul>
-        <li href="#">1. About Us</li>
-        <li href="#">2. Our Work</li>
-        <li href="#">3. Contact Us</li>
+        <li>
+          <Link to="/">1. About Us</Link>
+        </li>
+        <li>
+          <Link to="/work">2. Our Work</Link>
+        </li>
+        <li>
+          <Link to="/contact"> 3. Contact Us</Link>
+        </li>
       </ul>
     </Navigation>
   );
@@ -23,13 +32,15 @@ const Navigation = styled.div`
   height: 10vh;
   color: white;
   align-items: center;
-
+  a {
+    text-decoration: none;
+    color: white;
+  }
   #logo {
     text-decoration: none;
     color: white;
     font-family: "GT Walsheim Pro", sans-serif;
     font-size: 1.5rem;
-    font-weight: 900;
   }
   ul {
     position: relative;
