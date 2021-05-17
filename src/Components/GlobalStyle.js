@@ -29,7 +29,7 @@ button{
 }
 h2{
     font-weight:lighter;
-    font-size:3.5rem;
+    font-size:3rem;
 }
 h3{
     color:white
@@ -48,7 +48,7 @@ span{
 p{
     padding:3rem 0;
     color:#ccc;
-    font-size:1.2rem;
+    font-size:1.1rem;
     line-height:150%;
 }
 
