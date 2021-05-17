@@ -36,6 +36,7 @@ h3{
 }
 h4{
     font-weight:bold;
+    font-size:1.5rem;
 }
 a{
     font-size:1.1rem;
@@ -47,7 +48,7 @@ span{
 p{
     padding:3rem 0;
     color:#ccc;
-    font-size:1.4rem;
+    font-size:1.2rem;
     line-height:150%;
 }
 
