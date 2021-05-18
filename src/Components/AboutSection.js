@@ -6,6 +6,7 @@ import home1 from "../Img/home1.png";
 //Importing styled components
 // import styled from "styled-components";
 import { Description, Image, Hide, About } from "../styles";
+
 const AboutSection = () => {
   return (
     <About>
