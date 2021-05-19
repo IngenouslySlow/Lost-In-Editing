@@ -10,6 +10,9 @@ import { Description, Image, Hide, About } from "../styles";
 //Framer motion thing
 import { motion } from "framer-motion";
 import { titleAnim, fadeAnim, imageAnim } from "../animation";
+
+//Import the wave
+import Wave from "../Components/Wave";
 const AboutSection = () => {
   return (
     <About>
@@ -40,6 +43,7 @@ const AboutSection = () => {
           alt="A guy with a camera"
         />
       </Image>
+      <Wave />
     </About>
   );
 };
