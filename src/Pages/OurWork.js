@@ -22,7 +22,11 @@ import {
   slideContainer,
 } from "../animation";
 
+//Import useScroll component
+import { useScroll } from "../Components/useScroll";
 const OurWork = () => {
+  const [element, control] = useScroll();
+  const [element2, control2] = useScroll();
   return (
     <Work
       style={{ background: "#fff" }}
@@ -46,8 +50,13 @@ const OurWork = () => {
           </Hide>
         </Link>
       </Movie>
-      <Movie>
-        <motion.h2 variants={fadeAnim}>The Racer</motion.h2>
+      <Movie
+        variants={fadeAnim}
+        animate={control}
+        initial="hidden"
+        ref={element}
+      >
+        <motion.h2>The Racer</motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="work/the-racer">
           <Hide>
@@ -56,7 +65,14 @@ const OurWork = () => {
         </Link>
       </Movie>
       <Movie>
-        <motion.h2 variants={fadeAnim}>Good Times</motion.h2>
+        <motion.h2
+          variants={fadeAnim}
+          animate={control2}
+          initial="hidden"
+          ref={element2}
+        >
+          Good Times
+        </motion.h2>
         <motion.div variants={lineAnim} className="line"></motion.div>
         <Link to="work/good-times">
           <motion.img variants={imageAnim} src={goodtimes} alt="goodtimes" />
@@ -76,7 +92,7 @@ const Work = styled(motion.div)`
   }
 `;
 
-const Movie = styled.div`
+const Movie = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
